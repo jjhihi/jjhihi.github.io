@@ -1,0 +1,75 @@
+:root {
+  --ink: #332c49;
+  --muted: #766f88;
+  --paper: #fffaf4;
+  --lavender: #e8ddff;
+  --pink: #ffb6d9;
+  --yellow: #ffe89a;
+  --line: rgba(51, 44, 73, 0.14);
+  --shadow: 0 18px 50px rgba(82, 64, 116, 0.13);
+  font-family: "Trebuchet MS", "Noto Sans KR", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; }
+
+.site-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 1.4rem 2rem;
+}
+.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: .08em; }
+.brand span, em { color: #e66ca6; font-style: normal; }
+.site-nav { display: flex; gap: 2rem; }
+.site-nav a { color: var(--muted); font-size: .88rem; font-weight: 700; }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--ink); }
+.menu-toggle { display: none; }
+
+main { overflow: hidden; }
+.hero, .content-section, .games-section { margin: 0 auto; max-width: 1180px; padding: 7rem 2rem; }
+.hero { min-height: 76vh; padding-top: 12vh; }
+.eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .18em; margin: 0 0 1.4rem; color: #8b5db7; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { letter-spacing: -.05em; line-height: 1.12; }
+h1 { font-size: clamp(3.3rem, 9vw, 7.5rem); max-width: 850px; margin-bottom: 2rem; }
+h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; }
+.hero-copy, .content-section > p:not(.eyebrow), .games-section p:not(.eyebrow) { color: var(--muted); max-width: 36rem; }
+.button { background: var(--ink); border-radius: 999px; color: white; display: inline-flex; gap: 1rem; margin-top: 1.5rem; padding: .85rem 1.4rem; }
+.button:hover, .button:focus-visible { background: #6c559b; }
+.content-section { border-top: 1px solid var(--line); }
+.work-card { align-items: center; background: var(--lavender); border-radius: 2rem; box-shadow: var(--shadow); display: flex; gap: 2rem; margin-top: 3rem; max-width: 680px; padding: 2rem; }
+.card-number { align-items: center; background: var(--yellow); border-radius: 50%; display: flex; flex: 0 0 4rem; height: 4rem; justify-content: center; font-weight: 800; }
+.work-card h3 { margin-bottom: .35rem; }
+.work-card p { color: var(--muted); margin-bottom: 0; }
+.games-section { align-items: center; background: #f5ecff; display: grid; gap: 4rem; grid-template-columns: 1fr 1fr; max-width: none; padding-left: max(2rem, calc((100% - 1180px) / 2)); padding-right: max(2rem, calc((100% - 1180px) / 2)); }
+.game-placeholder { align-items: center; background: var(--paper); border: 2px dashed #d7b8f0; border-radius: 2rem; color: var(--muted); display: flex; flex-direction: column; justify-content: center; min-height: 260px; }
+.game-placeholder span { color: #e66ca6; font-size: 3rem; }
+.game-placeholder p { margin: .5rem 0 0; }
+.contact-section { padding-bottom: 9rem; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; padding: 2rem; text-align: center; }
+.sr-only { clip: rect(0, 0, 0, 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+
+@media (max-width: 700px) {
+  .site-header { padding: 1rem 1.25rem; position: relative; }
+  .menu-toggle { background: none; border: 0; cursor: pointer; display: block; font-size: 1.5rem; padding: .35rem; }
+  .site-nav { background: var(--paper); box-shadow: var(--shadow); display: none; flex-direction: column; gap: 0; left: 1rem; padding: .75rem; position: absolute; right: 1rem; top: 4.2rem; z-index: 2; }
+  .site-nav.is-open { display: flex; }
+  .site-nav a { padding: .7rem; }
+  .hero, .content-section, .games-section { padding: 5rem 1.25rem; }
+  .hero { min-height: 70vh; padding-top: 7rem; }
+  .games-section { display: block; }
+  .game-placeholder { margin-top: 2rem; min-height: 210px; }
+  .work-card { align-items: flex-start; gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
