@@ -48,7 +48,7 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; }
 .hero-copy, .content-section > p:not(.eyebrow), .games-section p:not(.eyebrow) { color: var(--muted); max-width: 36rem; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
 .hero-tags span { background: rgba(232, 221, 255, .75); border: 1px solid rgba(139, 93, 183, .16); border-radius: 999px; color: #6f5597; font-size: .72rem; font-weight: 800; padding: .45rem .7rem; }
-.hero-visual { margin: 0 0 0 auto; position: relative; width: 78%; }
+.hero-visual { margin: 0; position: relative; width: 100%; }
 .hero-visual::after { background: radial-gradient(circle, rgba(255, 182, 217, .45), transparent 68%); content: ""; inset: 12% -8% -10% 8%; position: absolute; z-index: -1; }
 .hero-visual img { border-radius: 2.2rem; box-shadow: var(--shadow); display: block; height: auto; max-width: 100%; object-fit: cover; }
 .hero-visual figcaption { color: #8b5db7; font-size: .65rem; font-weight: 800; letter-spacing: .16em; margin-top: .8rem; text-align: right; }
