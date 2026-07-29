@@ -7,6 +7,7 @@
     <title>JH — Smart Glass Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="game.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -18,6 +19,7 @@
       <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
         <a href="#about">About</a>
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="#games">Games</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -49,15 +51,43 @@
         </div>
       </section>
 
+      <section id="experience" class="content-section" aria-labelledby="experience-title">
+        <p class="eyebrow">03 — EXPERIENCE</p>
+        <h2 id="experience-title">현실의 디바이스에<br>새로운 시선을 더합니다.</h2>
+        <div class="work-card">
+          <span class="card-number">02</span>
+          <div>
+            <h3>Samsung Electronics</h3>
+            <p>스마트 글래스 개발 경험을 바탕으로 기술과 일상의 접점을 탐구합니다.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="games" class="games-section" aria-labelledby="games-title">
         <div>
           <p class="eyebrow">03 — GAMES</p>
           <h2 id="games-title">잠깐의<br><em>작은 모험</em></h2>
           <p>귀여운 친구들과 함께하는 인터랙티브 게임이 곧 찾아옵니다.</p>
         </div>
-        <div class="game-placeholder" role="status" aria-live="polite">
-          <span aria-hidden="true">✦</span>
-          <p>게임 준비 중</p>
+        <div class="game-panel">
+          <div class="game-stats" aria-live="polite">
+            <span>점수 <strong id="game-score">0</strong></span>
+            <span>최고 <strong id="high-score">0</strong></span>
+            <span id="game-status">준비 완료</span>
+          </div>
+          <canvas id="worm-game" width="480" height="320" aria-label="지렁이 게임"></canvas>
+          <div class="game-actions">
+            <button class="game-button" id="start-game" type="button">시작</button>
+            <button class="game-button" id="pause-game" type="button" disabled>일시정지</button>
+            <button class="game-button" id="restart-game" type="button">재시작</button>
+          </div>
+          <div class="touch-controls" aria-label="모바일 방향 조작">
+            <button type="button" data-direction="up" aria-label="위로 이동">↑</button>
+            <button type="button" data-direction="left" aria-label="왼쪽으로 이동">←</button>
+            <button type="button" data-direction="down" aria-label="아래로 이동">↓</button>
+            <button type="button" data-direction="right" aria-label="오른쪽으로 이동">→</button>
+          </div>
+          <p class="game-help">방향키 또는 WASD로 이동 · Space로 일시정지</p>
         </div>
       </section>
 
