@@ -38,17 +38,17 @@ button { color: inherit; font: inherit; }
 
 main { overflow: hidden; }
 .hero, .content-section, .games-section { margin: 0 auto; max-width: 1180px; padding: 7rem 2rem; }
-.hero { align-items: center; display: grid; gap: 3rem; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); min-height: 76vh; padding-top: 9vh; }
-.hero-copy-block { position: relative; z-index: 1; }
+.hero { min-height: 76vh; padding-top: 7vh; position: relative; }
+.hero-copy-block { left: 2rem; max-width: 34rem; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1; }
 .eyebrow { font-size: .72rem; font-weight: 800; letter-spacing: .18em; margin: 0 0 1.4rem; color: #8b5db7; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { letter-spacing: -.05em; line-height: 1.12; }
-h1 { font-size: clamp(3.3rem, 9vw, 7.5rem); max-width: 850px; margin-bottom: 2rem; }
+h1 { font-size: clamp(2.5rem, 4.5vw, 4.4rem); max-width: 680px; margin-bottom: 1.5rem; }
 h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; }
 .hero-copy, .content-section > p:not(.eyebrow), .games-section p:not(.eyebrow) { color: var(--muted); max-width: 36rem; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
 .hero-tags span { background: rgba(232, 221, 255, .75); border: 1px solid rgba(139, 93, 183, .16); border-radius: 999px; color: #6f5597; font-size: .72rem; font-weight: 800; padding: .45rem .7rem; }
-.hero-visual { margin: 0; position: relative; }
+.hero-visual { margin: 0 0 0 auto; position: relative; width: 78%; }
 .hero-visual::after { background: radial-gradient(circle, rgba(255, 182, 217, .45), transparent 68%); content: ""; inset: 12% -8% -10% 8%; position: absolute; z-index: -1; }
 .hero-visual img { border-radius: 2.2rem; box-shadow: var(--shadow); display: block; height: auto; max-width: 100%; object-fit: cover; }
 .hero-visual figcaption { color: #8b5db7; font-size: .65rem; font-weight: 800; letter-spacing: .16em; margin-top: .8rem; text-align: right; }
@@ -96,8 +96,9 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: .7rem; }
   .hero, .content-section, .games-section { padding: 5rem 1.25rem; }
-  .hero { display: block; min-height: 70vh; padding-top: 7rem; }
-  .hero-visual { margin-top: 3rem; }
+  .hero { min-height: 70vh; padding-top: 7rem; }
+  .hero-copy-block { left: 0; max-width: none; position: relative; top: auto; transform: none; }
+  .hero-visual { margin-top: 3rem; width: 100%; }
   .hero-visual figcaption { text-align: left; }
   .games-section { display: block; }
   .focus-grid { grid-template-columns: 1fr; }
