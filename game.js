@@ -56,7 +56,7 @@ function resetGame() {
   tickCount = 0;
   gameState = 'idle';
   updateScore();
-  updateStatus('준비 완료');
+  updateStatus('Ready');
   if (pauseButton) pauseButton.disabled = true;
   draw();
 }
@@ -137,7 +137,7 @@ function startGame() {
   if (timerId !== null) return;
   if (gameState === 'idle' || gameState === 'over') resetGame();
   gameState = 'running';
-  updateStatus('달리는 중');
+  updateStatus('Running');
   if (pauseButton) pauseButton.disabled = false;
   timerId = window.setInterval(tick, STEP_MS);
 }
@@ -147,7 +147,7 @@ function pauseGame() {
   window.clearInterval(timerId);
   timerId = null;
   gameState = 'paused';
-  updateStatus('일시정지');
+  updateStatus('Paused');
 }
 
 function restartGame() {
@@ -161,7 +161,7 @@ function endGame() {
   window.clearInterval(timerId);
   timerId = null;
   gameState = 'over';
-  updateStatus('게임 오버 · 재시작을 눌러보세요');
+  updateStatus('Game over · press Restart to try again');
   if (pauseButton) pauseButton.disabled = true;
   draw(true);
 }
